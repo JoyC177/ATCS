@@ -22,26 +22,16 @@ For the sentence encoder blocks, the following four models are implemented follo
 * BiLSTM with max pooling applied to the concatenation of word-level hidden states from both directions to retrieve sentence representations.
 	
 ## Prerequisites
-Project was created with:
-* Datasets 2.33
-* Python 3.10
-* Pytorch 2.0
-* Pytorch-cuda 11.7
-* SpaCy 3.3
-* Tensorboard 1.15.0
-* TensorboardX 2.5
-* Torchmetrics 0.11
-* Torchtext 0.15
-* Tqdm 4.65
+* [Anaconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 	
 ## Setup
-To run this project, install it locally using npm:
 
+1. Create the environment:
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+conda env create -f env.yml
 ```
+
+2. Install [SentEval](https://github.com/facebookresearch/SentEval) and follow the setup.
 
 ## Usage
 ### Training a model
@@ -73,6 +63,12 @@ optional arguments:
   --tensorboard_logs LOG_DIR      The directory for saving logs. Default is 'tensorboard_logs'.
   --debug                         Use 1% of data for debugging purposes.
   ```
+  
+Example how to train a model wiith the command line arguments:
+
+```
+$ python train.py <model_type> <checkpoint_path> ...
+```
 ### Evaluating a model
 
 ## Acknowledgements
