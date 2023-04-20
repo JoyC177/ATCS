@@ -44,24 +44,24 @@ Provide various use cases and code examples here.
 The models can be trained with the following command line arguments:
 
 ```bash
-usage: train.py [--model MODEL] [--lr LR] [--lr_decay LR_DECAY]
+usage: train.py [--model MODEL] [--train] [--lr LR] [--lr_decay LR_DECAY]
 		    [--lr_decrease_factor LR_DECREASE_FACTOR] [--lr_threshold LR_THRESHOLD] 
-		    [--batch_size BATCH_SIZE] [--checkpoint_dir CHECKPOINT_DIR]
-		    [--seed SEED] [--log_dir LOG_DIR] [--progress_bar] [--development]
+		    [--batch_size BATCH_SIZE] [--num_epochs NUM_EPOCHS][--saving SAVING_DIR]
+		    [--seed SEED] [--tensorboard_logs LOG_DIR] [--debug]
 
 optional arguments:
   --model MODEL                   Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMMax']. Default is 'aweencoder'.
-  --train TRAIN                   Force a training loop to overwrite existing models. Default is set to False.
+  --train                         Force a training loop to overwrite existing models. Default is set to False.
   --learning_rate LR              Learning rate for the optimizer to use. Default is 0.1.
   --lr_decay LR_DECAY             Learning rate decay applied after each epoch. Default is 0.99.
   --lr_decrease LR_DECREASE       Factor to decrease learning rate with when val accuracy decreases. Default is 5.
   --lr_threshold LR_THRESHOLD     Learning rate threshold to stop training at. Default is 10e-5.
   --batch_size BATCH_SIZE         Minibatch size. Default is 64.
   --num_epochs NUM_EPOCHS         The maximum number of epochs to train for. Default is 20.
-  --saving SAVING                 Directory for saving model weights. Default is 'saved'.
+  --saving SAVING_DIR             Directory for saving model weights. Default is 'saved'.
   --seed SEED                     Random seed for PyTorch. Default is 17.
   --tensorboard_logs LOG_DIR      The directory for saving logs. Default is 'tensorboard_logs'.
-  --debug                         Use 1% of data for debugging purposes.
+  --debug                         Use 1% of data for debugging purposes. Default is set to False.
   ```
   
 Example how to train a model from scratch with the command line arguments:
@@ -73,15 +73,14 @@ $ python train.py --model=LSTM --train=True
 The models can be evaluated on the SentEval tasks with the following command line arguments:
 
 ```bash
-usage: eval.py [--model MODEL] [--lr LR] [--lr_decay LR_DECAY]
-		    [--lr_decrease_factor LR_DECREASE_FACTOR] [--lr_threshold LR_THRESHOLD] 
-		    [--batch_size BATCH_SIZE] [--checkpoint_dir CHECKPOINT_DIR]
-		    [--seed SEED] [--log_dir LOG_DIR] [--progress_bar] [--development]
+usage: eval.py [--model MODEL] 
+		 [--batch_size BATCH_SIZE] [--saving_dir SAVING_DIR]
+		 [--seed SEED] [--SE_results_dir RESULTS_DIR]
 
 optional arguments:
   --model MODEL                        Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMMax']. Default is 'aweencoder'.
   --batch_size BATCH_SIZE              Minibatch size. Default is 64.
-  --saving SAVING                      Directory for saving model weights. Default is 'saved'.
+  --saving SAVING_DIR                  Directory for saving model weights. Default is 'saved'.
   --seed SEED                          Random seed for PyTorch. Default is 17.
   --SE_results_dir SE_RESULTS_DIR      The directory for saving SentEval results. Default is 'SentEval_saved'.
   ```
