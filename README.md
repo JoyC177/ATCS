@@ -9,7 +9,7 @@ et al., 2015);](https://arxiv.org/pdf/1508.05326.pdf)
 ## Table of contents
 * [General info](#general-info)
 * [Prerequisites](#prerequisites)
-* [Code Structure] (#code-structure)
+* [Code Structure](#code-structure)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
