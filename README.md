@@ -95,7 +95,6 @@ $ python senteval.py --model=LSTM
 ```
 
 ## Acknowledgements
-Give credit here.
 - This project was created with the help of the Deep Learning I notebook tutorials: https://uvadlc-notebooks.readthedocs.io/en/latest/
 - Insipration was taken from the NLP1 programming assignments and projects.
 
