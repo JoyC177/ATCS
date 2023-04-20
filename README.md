@@ -96,7 +96,7 @@ $ python senteval.py --model=LSTM
 
 ## Acknowledgements
 - This project was created with the help of the Deep Learning I notebook tutorials: https://uvadlc-notebooks.readthedocs.io/en/latest/
-- Insipration was taken from the NLP1 programming assignments and projects.
+- Insipration was taken from the NLP1 programming assignments and project.
 
 ## Contact
 Created by Joy Crosbie - joy.crosbie@student.uva.nl
