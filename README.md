@@ -9,6 +9,7 @@ et al., 2015);](https://arxiv.org/pdf/1508.05326.pdf)
 ## Table of contents
 * [General info](#general-info)
 * [Prerequisites](#prerequisites)
+* [Code Structure] (#code-structure)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
@@ -23,6 +24,15 @@ For the sentence encoder blocks, the following four models are implemented follo
 	
 ## Prerequisites
 * [Anaconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+## Code Stucture
+The code for the practical consists of the following files:
+* train.py: To train one of the four models described above.
+* senteval.py: To evaluate one of the four models described above on a subset of the SentEval tasks.
+* encoderdecoder.py: Implementation for the Generic NLI training scheme from [Conneau et al. (2018)](https://arxiv.org/pdf/1705.02364.pdf).
+* models.py: Adaptations of the Generic NLI training scheme for each of the four encoders described above.
+* data.py: Processes the [SNLI dataset](https://nlp.stanford.edu/projects/snli/) and returns a dataloader.
+* results.ipynb: Notebook containing demonstrations of results and error analyses.
 	
 ## Setup
 
@@ -35,12 +45,6 @@ conda env create -f env.yml
 
 ## Usage
 ### Training a model
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
-#### Model Arguments
 The models can be trained with the following command line arguments:
 
 ```bash
@@ -73,7 +77,7 @@ $ python train.py --model=LSTM --train=True
 The models can be evaluated on the SentEval tasks with the following command line arguments:
 
 ```bash
-usage: eval.py [--model MODEL] 
+usage: senteval.py [--model MODEL] 
 		 [--batch_size BATCH_SIZE] [--saving_dir SAVING_DIR]
 		 [--seed SEED] [--SE_results_dir RESULTS_DIR]
 
@@ -87,7 +91,7 @@ optional arguments:
 Example of how to evaluate a model with the command line arguments:
 
 ```
-$ python eval.py --model=LSTM
+$ python senteval.py --model=LSTM
 ```
 
 ## Acknowledgements
