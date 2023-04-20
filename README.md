@@ -54,7 +54,7 @@ usage: train.py [--model MODEL] [--train] [--lr LR] [--lr_decay LR_DECAY]
 		    [--seed SEED] [--tensorboard_logs LOG_DIR] [--debug]
 
 optional arguments:
-  --model MODEL                   Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMMax']. Default is 'aweencoder'.
+  --model MODEL                   Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMmax']. Default is 'aweencoder'.
   --train                         Force a training loop to overwrite existing models. Default is set to False.
   --learning_rate LR              Learning rate for the optimizer to use. Default is 0.1.
   --lr_decay LR_DECAY             Learning rate decay applied after each epoch. Default is 0.99.
@@ -82,7 +82,7 @@ usage: senteval.py [--model MODEL]
 		 [--seed SEED] [--SE_results_dir RESULTS_DIR]
 
 optional arguments:
-  --model MODEL                        Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMMax']. Default is 'aweencoder'.
+  --model MODEL                        Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMmax']. Default is 'aweencoder'.
   --batch_size BATCH_SIZE              Minibatch size. Default is 64.
   --saving SAVING_DIR                  Directory for saving model weights. Default is 'saved'.
   --seed SEED                          Random seed for PyTorch. Default is 17.
