@@ -64,12 +64,32 @@ optional arguments:
   --debug                         Use 1% of data for debugging purposes.
   ```
   
-Example how to train a model wiith the command line arguments:
+Example how to train a model from scratch with the command line arguments:
 
 ```
-$ python train.py <model_type> <checkpoint_path> ...
+$ python train.py --model=LSTM --train=True
 ```
 ### Evaluating a model
+The models can be evaluated on the SentEval tasks with the following command line arguments:
+
+```bash
+usage: eval.py [--model MODEL] [--lr LR] [--lr_decay LR_DECAY]
+		    [--lr_decrease_factor LR_DECREASE_FACTOR] [--lr_threshold LR_THRESHOLD] 
+		    [--batch_size BATCH_SIZE] [--checkpoint_dir CHECKPOINT_DIR]
+		    [--seed SEED] [--log_dir LOG_DIR] [--progress_bar] [--development]
+
+optional arguments:
+  --model MODEL                        Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMMax']. Default is 'aweencoder'.
+  --batch_size BATCH_SIZE              Minibatch size. Default is 64.
+  --saving SAVING                      Directory for saving model weights. Default is 'saved'.
+  --seed SEED                          Random seed for PyTorch. Default is 17.
+  --SE_results_dir SE_RESULTS_DIR      The directory for saving SentEval results. Default is 'SentEval_saved'.
+  ```
+Example of how to evaluate a model with the command line arguments:
+
+```
+$ python eval.py --model=LSTM
+```
 
 ## Acknowledgements
 Give credit here.
