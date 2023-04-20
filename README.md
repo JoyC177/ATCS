@@ -30,7 +30,7 @@ The code for the practical consists of the following files:
 * train.py: To train one of the four models described above.
 * senteval.py: To evaluate one of the four models described above on a subset of the SentEval tasks.
 * encoderdecoder.py: Implementation for the Generic NLI training scheme from [Conneau et al. (2018)](https://arxiv.org/pdf/1705.02364.pdf).
-* models.py: Adaptations of the Generic NLI training scheme for each of the four encoders described above.
+* models.py: Adaptations of the Generic NLI training scheme for each of the four models described above.
 * data.py: Processes the [SNLI dataset](https://nlp.stanford.edu/projects/snli/) and returns a dataloader.
 * results.ipynb: Notebook containing demonstrations of results and error analyses.
 	
