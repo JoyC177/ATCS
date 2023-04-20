@@ -77,13 +77,11 @@ $ python train.py --model=LSTM --train=True
 The models can be evaluated on the SentEval tasks with the following command line arguments:
 
 ```bash
-usage: senteval.py [--model MODEL] 
-		 [--batch_size BATCH_SIZE] [--saving_dir SAVING_DIR]
+usage: senteval.py [--model MODEL] [--saving_dir SAVING_DIR]
 		 [--seed SEED] [--SE_results_dir RESULTS_DIR]
 
 optional arguments:
   --model MODEL                        Name of the encoder model to use. Options: ['aweencoder', 'LSTM', 'BiLSTM', 'BiLSTMmax']. Default is 'aweencoder'.
-  --batch_size BATCH_SIZE              Minibatch size. Default is 64.
   --saving SAVING_DIR                  Directory for saving model weights. Default is 'saved'.
   --seed SEED                          Random seed for PyTorch. Default is 17.
   --SE_results_dir SE_RESULTS_DIR      The directory for saving SentEval results. Default is 'SentEval_saved'.
