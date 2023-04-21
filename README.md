@@ -33,6 +33,8 @@ The code for the practical consists of the following files:
 * models.py: Adaptations of the Generic NLI training scheme for each of the four models described above.
 * data.py: Processes the [SNLI dataset](https://nlp.stanford.edu/projects/snli/) and returns a dataloader.
 * results.ipynb: Notebook containing demonstrations of results and error analyses.
+
+The link to the Google Drive folder containing the model checkpoints and the TensorBoard logs: https://drive.google.com/drive/folders/1CoeMuSrTbmecHFy5kt2G7_xYg8lDd9zE?usp=share_link
 	
 ## Setup
 
